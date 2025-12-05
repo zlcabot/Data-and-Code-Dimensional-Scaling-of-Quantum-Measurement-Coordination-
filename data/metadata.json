@@ -1,0 +1,139 @@
+{
+  "dataset_name": "Dimensional Scaling of Quantum Measurement Coordination",
+  "version": "1.0.0",
+  "date_created": "2024-12-04",
+  "author": "Zayin Cabot",
+  "contact": "zcabotresearch@gmail.com",
+  "license": "MIT",
+  "description": "Quantum trajectory data demonstrating inverse blessing of dimensionality in continuous measurement",
+  
+  "simulation_parameters": {
+    "qutip_version": "4.7.0",
+    "dimensions": [2, 3, 4, 5, 6, 7, 8],
+    "trajectories_per_dimension": 1000,
+    "time_span": {
+      "T_max": 100,
+      "unit": "μs",
+      "dt": 0.1,
+      "description": "Time interval for trajectory sampling"
+    },
+    "measurement_strength": {
+      "gamma": 1.0,
+      "unit": "MHz",
+      "description": "Standard homodyne measurement strength"
+    },
+    "coupling_parameters": {
+      "chi_over_kappa": 1.0,
+      "description": "Optimal coupling ratio for coordination"
+    }
+  },
+  
+  "coordination_measures": {
+    "Phi_d": {
+      "name": "Duration coordination",
+      "description": "Actualized system-apparatus correlation",
+      "computation": "Fisher information normalized",
+      "range": [0, 1]
+    },
+    "Phi_f": {
+      "name": "Frequency coordination",
+      "description": "Remaining superposition / future potential",
+      "computation": "Energy uncertainty normalized",
+      "range": [0, 1]
+    },
+    "Phi_a": {
+      "name": "Coordination capacity",
+      "description": "Agency spike marking measurement event",
+      "computation": "Product measure of Phi_d and Phi_f imbalance",
+      "range": [0, 1]
+    },
+    "S_coord": {
+      "name": "Coordination action",
+      "description": "Integrated cost of establishing correlation",
+      "computation": "Temporal integral of Phi_a",
+      "unit": "arbitrary"
+    }
+  },
+  
+  "main_results": {
+    "scaling_law": {
+      "formula": "S_coord(d) = A * d^(-alpha)",
+      "A": 8.98,
+      "A_uncertainty": 0.16,
+      "alpha": 1.787,
+      "alpha_uncertainty": 0.009,
+      "R_squared": 0.9987,
+      "description": "Inverse blessing of dimensionality"
+    },
+    "critical_dimension": {
+      "d_c": 5.8,
+      "description": "Dimension where S_coord crosses pi/8 threshold"
+    },
+    "pi_over_8_quantum": {
+      "value": 0.393,
+      "description": "Universal coordination threshold"
+    }
+  },
+  
+  "data_files": {
+    "coordination_d2.csv": {
+      "dimension": 2,
+      "description": "Qubit (2-level) coordination data",
+      "trajectories": 1000,
+      "columns": ["time", "Phi_d", "Phi_f", "Phi_a", "S_coord_cumulative"]
+    },
+    "coordination_d3.csv": {
+      "dimension": 3,
+      "description": "Qutrit (3-level) coordination data",
+      "trajectories": 1000,
+      "columns": ["time", "Phi_d", "Phi_f", "Phi_a", "S_coord_cumulative"]
+    },
+    "coordination_d4.csv": {
+      "dimension": 4,
+      "description": "4-level system coordination data",
+      "trajectories": 1000,
+      "columns": ["time", "Phi_d", "Phi_f", "Phi_a", "S_coord_cumulative"]
+    },
+    "coordination_d5.csv": {
+      "dimension": 5,
+      "description": "5-level system coordination data",
+      "trajectories": 1000,
+      "columns": ["time", "Phi_d", "Phi_f", "Phi_a", "S_coord_cumulative"]
+    },
+    "coordination_d6.csv": {
+      "dimension": 6,
+      "description": "6-level system coordination data",
+      "trajectories": 1000,
+      "columns": ["time", "Phi_d", "Phi_f", "Phi_a", "S_coord_cumulative"]
+    },
+    "coordination_d7.csv": {
+      "dimension": 7,
+      "description": "7-level system coordination data",
+      "trajectories": 1000,
+      "columns": ["time", "Phi_d", "Phi_f", "Phi_a", "S_coord_cumulative"]
+    },
+    "coordination_d8.csv": {
+      "dimension": 8,
+      "description": "8-level system coordination data",
+      "trajectories": 1000,
+      "columns": ["time", "Phi_d", "Phi_f", "Phi_a", "S_coord_cumulative"]
+    },
+    "fast_gamma_results.csv": {
+      "description": "Protocol sensitivity analysis: varying measurement strength",
+      "gamma_range": [0.5, 2.0],
+      "columns": ["dimension", "gamma", "S_coord", "peak_time", "peak_amplitude"]
+    }
+  },
+  
+  "reproduction": {
+    "code_dependencies": "See requirements.txt",
+    "example_notebooks": "See examples/ directory",
+    "figure_generation": "See figures/ directory",
+    "instructions": "See README.md Quick Start section"
+  },
+  
+  "citation": {
+    "paper": "Cabot, Z. (2024). Dimensional Scaling of Quantum Measurement Coordination: An Inverse Blessing of Dimensionality. arXiv:XXXX.XXXXX",
+    "repository": "https://github.com/zlcabot/Data-and-Code-Dimensional-Scaling-of-Quantum-Measurement-Coordination-"
+  }
+}

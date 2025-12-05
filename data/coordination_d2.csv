@@ -1,0 +1,32 @@
+# Sample Coordination Data for d=2 (Qubit)
+# Generated from continuous homodyne measurement trajectory
+# Measurement strength gamma = 1.0 MHz, chi/kappa = 1.0
+# Time unit: microseconds (μs)
+# Coordination measures: Phi_d (duration), Phi_f (frequency), Phi_a (agency/coordination capacity)
+# S_coord_cumulative: Running integral of Phi_a
+#
+# This is a TEMPLATE file showing the expected format.
+# Replace with actual simulation data.
+#
+time,Phi_d,Phi_f,Phi_a,S_coord_cumulative
+0.0,0.001,0.999,0.063,0.000
+0.1,0.012,0.988,0.195,0.013
+0.2,0.034,0.966,0.342,0.040
+0.3,0.067,0.933,0.456,0.084
+0.4,0.109,0.891,0.531,0.147
+0.5,0.158,0.842,0.575,0.227
+0.6,0.211,0.789,0.597,0.322
+0.7,0.266,0.734,0.602,0.430
+0.8,0.321,0.679,0.595,0.548
+0.9,0.374,0.626,0.580,0.674
+1.0,0.425,0.575,0.559,0.806
+1.1,0.472,0.528,0.535,0.942
+1.2,0.516,0.484,0.509,1.082
+1.3,0.556,0.444,0.482,1.224
+1.4,0.593,0.407,0.455,1.368
+1.5,0.627,0.373,0.428,1.512
+1.6,0.658,0.342,0.401,1.655
+1.7,0.686,0.314,0.375,1.798
+1.8,0.711,0.289,0.350,1.939
+1.9,0.734,0.266,0.326,2.078
+2.0,0.755,0.245,0.303,2.215
